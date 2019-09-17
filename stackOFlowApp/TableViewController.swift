@@ -12,16 +12,9 @@ class TableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let data = ["One", "Two", "Three", "Four", "Five"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         tableView.register(UINib(nibName: "TableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "Cell")
     
         tableView.rowHeight = 200
@@ -38,14 +31,16 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
     
-        cell.textLabel?.text = data[indexPath.row]
-        cell.textView.text = data[indexPath.row]
+        cell.textView.text = dataSource[indexPath.row]
+
+        //cell.avatarImageView.image = #imageLiteral(resourceName: "iOS-image")
+        
         return cell
     }
     
@@ -58,7 +53,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         
-        cell.textView.isEditable = true
+        cell.backgroundColor = Colors.borderColor
     }
     
 }

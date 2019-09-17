@@ -20,8 +20,6 @@ class ViewController: UIViewController {
     var selectedTag = "objective-c"
     var searchString = ""
     
-    var JSONdata = Data.init()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // setup
@@ -35,10 +33,11 @@ class ViewController: UIViewController {
     
     private func requestAPI(tag: String) {
         let beginURL = "https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged="
-        let urlString = beginURL + tag + "&site=stackoverflow"
-        //let urlString = "https://itunes.apple.com/search?term=hip&limit=1"
+        let endURL = "&site=stackoverflow"
+        let urlString = beginURL + tag + endURL
+        
         guard let url = URL(string: urlString) else {
-            print("Url error")
+            print("URL error - something at URL content!")
             return }
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
@@ -46,9 +45,19 @@ class ViewController: UIViewController {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)
                 print(json)
                 
-                self.JSONdata = data!
-                print("====DATA====")
-                print(self.JSONdata)
+                // проверка на поток
+                print(Thread.current)
+                
+                print(data!)
+                
+                let item = try JSONDecoder().decode(Element.self, from: data!)
+                print("Item = \(item)")
+                
+                dataSource.removeAll()
+                for i in item.items {
+                    dataSource.append(i.title!)
+                    //avatarImageURL.append(i.profile_image ?? "")
+                }
             } catch let parsingError {
                 print("error in JSONSerialization! Error: \(parsingError)")
             }
@@ -56,20 +65,34 @@ class ViewController: UIViewController {
         task.resume()
         
         // декодим JSON
-        decodeJSON()
+        //decodeJSON()
     }
 
-    private func decodeJSON() {
-        do {
-            let jsonDecoder = JSONDecoder()
-            //jsonDecoder.dataDecodingStrategy = 
-            let item = try jsonDecoder.decode(Element.self, from: JSONdata)
-            print("Item = \(String(describing: item.items[0].title))")
-        }
-        catch {
-            print("Some Errors: \(error.localizedDescription)")
-        }
-    }
+//    private func requestAlamofire(tag: String) {
+//        let beginURL = "https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged="
+//        let endURL = "&site=stackoverflow"
+//        let urlString = beginURL + tag + endURL
+//
+//        //var JSONdata = Data(base64Encoded: "") // пустые данные
+//        request(urlString).responseJSON { response in
+//            guard response.result.isSuccess else {
+//                print("Error while fetching tags: \(String(describing: response.result.error))")
+//                return
+//            }
+//            self.JSONdata = response.data!
+//            let json = String(bytes: self.JSONdata, encoding: .utf8)
+//            print("===== JSON Alamofire =====")
+//            print(json!)
+//        }
+//        do {
+//            let item = try JSONDecoder().decode(Element.self, from: JSONdata)
+//            print("Item = \(String(describing: item.items[0].title))")
+//        } catch {
+//            print("Some Errors: \(error.localizedDescription)")
+//        }
+//        // декодим JSON
+//        //decodeJSON()
+//    }
     
     // по нажатию на кнопку SEARCH
     @IBAction func searchBtnTapped(_ sender: UIButton) {
@@ -77,6 +100,10 @@ class ViewController: UIViewController {
         UIAlertController.showAlert(title: "Searhing at StackOF", msg: "Search tag: \(selectedTag)\nSearch string: \(searchString)", target: self)
         
         requestAPI(tag: selectedTag)
+        
+        DispatchQueue.main.async {
+            print(Thread.current)
+        }
     }
 }
 

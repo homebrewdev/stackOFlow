@@ -8,6 +8,9 @@
 
 import UIKit
 
+var dataSource = [""]
+//var avatarImageURL = [""]
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

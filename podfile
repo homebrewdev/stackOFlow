@@ -1,0 +1,8 @@
+platform :ios, '12.4'
+use_frameworks!
+
+target 'stackOFlowApp' do
+
+    pod 'Alamofire'
+
+end

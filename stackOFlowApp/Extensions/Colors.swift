@@ -7,8 +7,9 @@
 //
 import UIKit
 
-enum ButtonAppearance {
+enum Colors {
     static let backgroundColor = UIColor.white
     static let borderColor = UIColor.gray
     static let textColor = UIColor.black
+    static let grayColor = UIColor.gray
 }
