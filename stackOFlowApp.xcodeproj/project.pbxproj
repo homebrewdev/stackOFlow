@@ -14,12 +14,13 @@
 		DE052A5C231E6F05005B12DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE052A5B231E6F05005B12DC /* Assets.xcassets */; };
 		DE052A5F231E6F05005B12DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE052A5D231E6F05005B12DC /* LaunchScreen.storyboard */; };
 		DE052A67231E707D005B12DC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052A66231E707D005B12DC /* TabBarController.swift */; };
-		DE052A6A231E711A005B12DC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052A68231E711A005B12DC /* TableViewCell.swift */; };
-		DE052A6B231E711A005B12DC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE052A69231E711A005B12DC /* TableViewCell.xib */; };
 		DE052A6E231E724E005B12DC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052A6C231E724E005B12DC /* TableViewController.swift */; };
 		DE052A71231E7667005B12DC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052A70231E7667005B12DC /* Colors.swift */; };
+		DE416BA02333B57E00BD137D /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE416B9F2333B57E00BD137D /* Gradient.swift */; };
 		DE4F02F0232F9AB500DF9361 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F02EF232F9AB500DF9361 /* Entity.swift */; };
 		DE4F02F2232F9CCB00DF9361 /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F02F1232F9CCB00DF9361 /* JSONViewController.swift */; };
+		DE4F02F9233235DA00DF9361 /* SoFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F02F7233235DA00DF9361 /* SoFTableViewCell.swift */; };
+		DE4F02FA233235DA00DF9361 /* SoFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4F02F8233235DA00DF9361 /* SoFTableViewCell.xib */; };
 		DE9E2B942320F5F700307B99 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E2B922320F5F700307B99 /* CustomAlert.swift */; };
 		DE9E2B952320F5F700307B99 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E2B932320F5F700307B99 /* RandomColor.swift */; };
 /* End PBXBuildFile section */
@@ -35,12 +36,13 @@
 		DE052A5E231E6F05005B12DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE052A60231E6F05005B12DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE052A66231E707D005B12DC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		DE052A68231E711A005B12DC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		DE052A69231E711A005B12DC /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		DE052A6C231E724E005B12DC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DE052A70231E7667005B12DC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DE416B9F2333B57E00BD137D /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		DE4F02EF232F9AB500DF9361 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		DE4F02F1232F9CCB00DF9361 /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
+		DE4F02F7233235DA00DF9361 /* SoFTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoFTableViewCell.swift; sourceTree = "<group>"; };
+		DE4F02F8233235DA00DF9361 /* SoFTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoFTableViewCell.xib; sourceTree = "<group>"; };
 		DE9E2B922320F5F700307B99 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		DE9E2B932320F5F700307B99 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		E2DCEB0ABE05CA00D5DDF8A2 /* Pods_stackOFlowApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stackOFlowApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +106,8 @@
 				DE052A58231E6F04005B12DC /* Main.storyboard */,
 				DE052A66231E707D005B12DC /* TabBarController.swift */,
 				DE052A6C231E724E005B12DC /* TableViewController.swift */,
-				DE052A68231E711A005B12DC /* TableViewCell.swift */,
-				DE052A69231E711A005B12DC /* TableViewCell.xib */,
+				DE4F02F7233235DA00DF9361 /* SoFTableViewCell.swift */,
+				DE4F02F8233235DA00DF9361 /* SoFTableViewCell.xib */,
 				DE052A5B231E6F05005B12DC /* Assets.xcassets */,
 				DE052A5D231E6F05005B12DC /* LaunchScreen.storyboard */,
 				DE052A60231E6F05005B12DC /* Info.plist */,
@@ -119,6 +121,7 @@
 				DE052A70231E7667005B12DC /* Colors.swift */,
 				DE9E2B922320F5F700307B99 /* CustomAlert.swift */,
 				DE9E2B932320F5F700307B99 /* RandomColor.swift */,
+				DE416B9F2333B57E00BD137D /* Gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,8 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE052A5F231E6F05005B12DC /* LaunchScreen.storyboard in Resources */,
-				DE052A6B231E711A005B12DC /* TableViewCell.xib in Resources */,
 				DE052A5C231E6F05005B12DC /* Assets.xcassets in Resources */,
+				DE4F02FA233235DA00DF9361 /* SoFTableViewCell.xib in Resources */,
 				DE052A5A231E6F04005B12DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,13 +249,14 @@
 			files = (
 				DE052A67231E707D005B12DC /* TabBarController.swift in Sources */,
 				DE052A71231E7667005B12DC /* Colors.swift in Sources */,
-				DE052A6A231E711A005B12DC /* TableViewCell.swift in Sources */,
 				DE052A57231E6F04005B12DC /* ViewController.swift in Sources */,
 				DE9E2B952320F5F700307B99 /* RandomColor.swift in Sources */,
 				DE4F02F0232F9AB500DF9361 /* Entity.swift in Sources */,
 				DE052A6E231E724E005B12DC /* TableViewController.swift in Sources */,
 				DE052A55231E6F04005B12DC /* AppDelegate.swift in Sources */,
 				DE4F02F2232F9CCB00DF9361 /* JSONViewController.swift in Sources */,
+				DE416BA02333B57E00BD137D /* Gradient.swift in Sources */,
+				DE4F02F9233235DA00DF9361 /* SoFTableViewCell.swift in Sources */,
 				DE9E2B942320F5F700307B99 /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,4 +21,7 @@ class JSONViewController : UIViewController {
 //            textView.text = String(bytes: JSONdata!, encoding: .utf8)
 //        }
     }
+    @IBAction func backBtnTap(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToTableVC", sender: UIBarButtonItem.self)
+    }
 }

@@ -19,22 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JS1-wy-xeW">
-                                <rect key="frame" x="8" y="52" width="398" height="753"/>
+                                <rect key="frame" x="8" y="52" width="398" height="561"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEk-Pu-MhK">
+                                <rect key="frame" x="190" y="629" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnTap:" destination="5iS-U9-hii" eventType="touchUpInside" id="fIX-WX-PWm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JS1-wy-xeW" firstAttribute="top" secondItem="g3m-CV-QJm" secondAttribute="top" constant="8" id="E7J-HY-RiY"/>
+                            <constraint firstItem="ZEk-Pu-MhK" firstAttribute="centerX" secondItem="0Ts-tj-CJ1" secondAttribute="centerX" id="ISm-AZ-Mr2"/>
                             <constraint firstItem="JS1-wy-xeW" firstAttribute="leading" secondItem="g3m-CV-QJm" secondAttribute="leading" constant="8" id="O1e-Yn-x4U"/>
+                            <constraint firstItem="ZEk-Pu-MhK" firstAttribute="top" secondItem="JS1-wy-xeW" secondAttribute="bottom" constant="16" id="Uzz-SQ-6VZ"/>
                             <constraint firstItem="g3m-CV-QJm" firstAttribute="trailing" secondItem="JS1-wy-xeW" secondAttribute="trailing" constant="8" id="qmb-LT-Kyw"/>
-                            <constraint firstItem="g3m-CV-QJm" firstAttribute="bottom" secondItem="JS1-wy-xeW" secondAttribute="bottom" constant="8" id="ra1-gh-BtE"/>
+                            <constraint firstItem="g3m-CV-QJm" firstAttribute="bottom" secondItem="JS1-wy-xeW" secondAttribute="bottom" constant="200" id="ra1-gh-BtE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3m-CV-QJm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="JSON" id="UXM-lM-I1S"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="JS1-wy-xeW" id="6Ci-2S-Hq0"/>
+                        <segue destination="ml8-me-fxs" kind="show" identifier="backToTableVC" id="U9e-H2-cnm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vd7-w8-SmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,6 +84,7 @@
                     <tabBarItem key="tabBarItem" title="Results" id="Hd2-EO-WxD"/>
                     <connections>
                         <outlet property="tableView" destination="2vC-xs-wvA" id="79v-Dl-Sxf"/>
+                        <segue destination="5iS-U9-hii" kind="show" identifier="segueFromCell" id="gsO-Cc-khu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evn-Vb-VKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,4 +178,8 @@
             <point key="canvasLocation" x="-113" y="-339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="U9e-H2-cnm"/>
+        <segue reference="gsO-Cc-khu"/>
+    </inferredMetricsTieBreakers>
 </document>
