@@ -5,11 +5,9 @@
 //  Created by Egor Devyatov on 03/09/2019.
 //  Copyright © 2019 Egor Devyatov. All rights reserved.
 //
-
 import UIKit
-
-var dataSource = [""]
-//var avatarImageURL = [""]
+// хранилище данных
+var store = Store(titles: [""], autors: [""], creationDates: [], links: [""], scores: [])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,22 +17,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-    }
-
-
 }
 

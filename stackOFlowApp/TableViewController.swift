@@ -12,18 +12,29 @@ class TableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let ROW_HEIGHT = 200
+    let ROW_HEIGHT = CGFloat(200) // временно захардкожено
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "SoFTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "Cell")
-    
-        tableView.rowHeight = 200
-        tableView.estimatedRowHeight = 200
         
+        // настройка UI таблицы
+        initTableViewUI()
     }
 
+    // настройка UI таблицы
+    private func initTableViewUI() {
+        // захардкожено
+        tableView.rowHeight = ROW_HEIGHT
+        tableView.estimatedRowHeight = ROW_HEIGHT
+        
+        // бэкграунд таблицы
+        let backImageView = UIImageView(image: UIImage(named: "iOS-image"))
+        backImageView.frame = self.tableView.frame
+        self.tableView.backgroundView = backImageView;
+
+    }
 }
 
 // реализация методов делегата и UITableViewDataSource
@@ -34,42 +45,40 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return store.titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SoFTableViewCell
     
-        cell.textView.text = dataSource[indexPath.row]
+        let index = indexPath.row
+        cell.textView.text = store.titles[index]
         cell.textView.textColor = .black
-        // редактируем картинку
-        cell.imageV.image = #imageLiteral(resourceName: "iOS-image")
-        cell.imageV.backgroundColor = UIColor.random
-        // наложение теней
-//        cell.layer.shadowColor = UIColor.black.cgColor
-//        cell.layer.shadowOpacity = 10
-//        cell.layer.shadowOffset = .zero
-//        cell.layer.shadowRadius = 50
-//        cell.imageV.layer.shadowPath = UIBezierPath(rect: cell.imageV.bounds).cgPath
-        // градиент устанавливаем
-        cell.contentView.applyGradient(colours: [.gray , .lightGray])
+        
+        cell.creationDateLbl.text = String(store.creationDates[index])
+        //cell.authorLabel.text = links[indexPath.row]
+        cell.scoreLbl.text = String(store.scores[index])
+        
+        // заливаем градиент ячейки
+        cell.contentView.applyGradient(colours: [.darkGray, .white])
         cell.layer.cornerRadius = 8.0
         cell.layer.masksToBounds = true
-        //cell.transform.scaledBy(x: 10, y: 10)
-
-        //cell.CellImageView.image = #imageLiteral(resourceName: "iOS-image")
         
         return cell
     }
     
     // вычисляем ширину ячейки
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(ROW_HEIGHT)
+        return ROW_HEIGHT
     }
 
-    
     // при выборе(нажатии) на ячейку
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            // добавляем черную рамку вокруг этой ячейки
+            cell.contentView.layer.borderColor = UIColor.black.cgColor
+            cell.contentView.layer.borderWidth = 3
+        }
         
         // переход на экран инфо
         performSegue(withIdentifier: "segueFromCell", sender: tableView.cellForRow(at: indexPath))
@@ -77,40 +86,3 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */

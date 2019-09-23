@@ -17,6 +17,7 @@
 		DE052A6E231E724E005B12DC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052A6C231E724E005B12DC /* TableViewController.swift */; };
 		DE052A71231E7667005B12DC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE052A70231E7667005B12DC /* Colors.swift */; };
 		DE416BA02333B57E00BD137D /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE416B9F2333B57E00BD137D /* Gradient.swift */; };
+		DE416BA22339073C00BD137D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE416BA12339073C00BD137D /* Store.swift */; };
 		DE4F02F0232F9AB500DF9361 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F02EF232F9AB500DF9361 /* Entity.swift */; };
 		DE4F02F2232F9CCB00DF9361 /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F02F1232F9CCB00DF9361 /* JSONViewController.swift */; };
 		DE4F02F9233235DA00DF9361 /* SoFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F02F7233235DA00DF9361 /* SoFTableViewCell.swift */; };
@@ -39,7 +40,8 @@
 		DE052A6C231E724E005B12DC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DE052A70231E7667005B12DC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DE416B9F2333B57E00BD137D /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		DE4F02EF232F9AB500DF9361 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		DE416BA12339073C00BD137D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		DE4F02EF232F9AB500DF9361 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = stackOFlowApp/Entity.swift; sourceTree = SOURCE_ROOT; };
 		DE4F02F1232F9CCB00DF9361 /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
 		DE4F02F7233235DA00DF9361 /* SoFTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoFTableViewCell.swift; sourceTree = "<group>"; };
 		DE4F02F8233235DA00DF9361 /* SoFTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoFTableViewCell.xib; sourceTree = "<group>"; };
@@ -98,11 +100,11 @@
 		DE052A53231E6F04005B12DC /* stackOFlowApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE416BA42339085700BD137D /* Entity */,
 				DE9E2B962320F96400307B99 /* Extensions */,
 				DE052A54231E6F04005B12DC /* AppDelegate.swift */,
 				DE052A56231E6F04005B12DC /* ViewController.swift */,
 				DE4F02F1232F9CCB00DF9361 /* JSONViewController.swift */,
-				DE4F02EF232F9AB500DF9361 /* Entity.swift */,
 				DE052A58231E6F04005B12DC /* Main.storyboard */,
 				DE052A66231E707D005B12DC /* TabBarController.swift */,
 				DE052A6C231E724E005B12DC /* TableViewController.swift */,
@@ -113,6 +115,15 @@
 				DE052A60231E6F05005B12DC /* Info.plist */,
 			);
 			path = stackOFlowApp;
+			sourceTree = "<group>";
+		};
+		DE416BA42339085700BD137D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F02EF232F9AB500DF9361 /* Entity.swift */,
+				DE416BA12339073C00BD137D /* Store.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		DE9E2B962320F96400307B99 /* Extensions */ = {
@@ -250,6 +261,7 @@
 				DE052A67231E707D005B12DC /* TabBarController.swift in Sources */,
 				DE052A71231E7667005B12DC /* Colors.swift in Sources */,
 				DE052A57231E6F04005B12DC /* ViewController.swift in Sources */,
+				DE416BA22339073C00BD137D /* Store.swift in Sources */,
 				DE9E2B952320F5F700307B99 /* RandomColor.swift in Sources */,
 				DE4F02F0232F9AB500DF9361 /* Entity.swift in Sources */,
 				DE052A6E231E724E005B12DC /* TableViewController.swift in Sources */,

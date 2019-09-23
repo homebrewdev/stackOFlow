@@ -19,27 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JS1-wy-xeW">
-                                <rect key="frame" x="8" y="52" width="398" height="561"/>
+                                <rect key="frame" x="8" y="73" width="398" height="676"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEk-Pu-MhK">
-                                <rect key="frame" x="190" y="629" width="34" height="30"/>
+                                <rect key="frame" x="190" y="765" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backBtnTap:" destination="5iS-U9-hii" eventType="touchUpInside" id="fIX-WX-PWm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Ответы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-cP-DZ8">
+                                <rect key="frame" x="175" y="44" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JS1-wy-xeW" firstAttribute="top" secondItem="g3m-CV-QJm" secondAttribute="top" constant="8" id="E7J-HY-RiY"/>
+                            <constraint firstItem="JS1-wy-xeW" firstAttribute="top" secondItem="CGa-cP-DZ8" secondAttribute="bottom" constant="8" id="7m8-Qn-rbf"/>
                             <constraint firstItem="ZEk-Pu-MhK" firstAttribute="centerX" secondItem="0Ts-tj-CJ1" secondAttribute="centerX" id="ISm-AZ-Mr2"/>
+                            <constraint firstItem="CGa-cP-DZ8" firstAttribute="centerX" secondItem="0Ts-tj-CJ1" secondAttribute="centerX" id="MmG-uh-c1y"/>
                             <constraint firstItem="JS1-wy-xeW" firstAttribute="leading" secondItem="g3m-CV-QJm" secondAttribute="leading" constant="8" id="O1e-Yn-x4U"/>
                             <constraint firstItem="ZEk-Pu-MhK" firstAttribute="top" secondItem="JS1-wy-xeW" secondAttribute="bottom" constant="16" id="Uzz-SQ-6VZ"/>
+                            <constraint firstItem="CGa-cP-DZ8" firstAttribute="top" secondItem="g3m-CV-QJm" secondAttribute="top" id="Xee-I3-9OJ"/>
                             <constraint firstItem="g3m-CV-QJm" firstAttribute="trailing" secondItem="JS1-wy-xeW" secondAttribute="trailing" constant="8" id="qmb-LT-Kyw"/>
-                            <constraint firstItem="g3m-CV-QJm" firstAttribute="bottom" secondItem="JS1-wy-xeW" secondAttribute="bottom" constant="200" id="ra1-gh-BtE"/>
+                            <constraint firstItem="g3m-CV-QJm" firstAttribute="bottom" secondItem="JS1-wy-xeW" secondAttribute="bottom" constant="64" id="ra1-gh-BtE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3m-CV-QJm"/>
                     </view>
@@ -53,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vd7-w8-SmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="544.41964285714278"/>
+            <point key="canvasLocation" x="47.826086956521742" y="543.75"/>
         </scene>
         <!--TableView-->
         <scene sceneID="vlJ-uR-hZq">

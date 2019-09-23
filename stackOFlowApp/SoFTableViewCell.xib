@@ -19,32 +19,58 @@
                 <rect key="frame" x="0.0" y="0.0" width="420" height="166.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXN-UO-4DB">
-                        <rect key="frame" x="114" y="0.0" width="297" height="166.5"/>
+                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="IXN-UO-4DB">
+                        <rect key="frame" x="0.0" y="61" width="420" height="97.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lxv-Lt-Jq0">
-                        <rect key="frame" x="6" y="3" width="100" height="160.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="LU9-g2-lA6"/>
-                        </constraints>
-                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrn-T4-Z3J">
+                        <rect key="frame" x="11" y="15" width="48" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R46-Oa-GJH">
+                        <rect key="frame" x="373" y="8" width="39" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n93-9h-VDa">
+                        <rect key="frame" x="367" y="36" width="45" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кол-во голосов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDd-9Y-Ehc">
+                        <rect key="frame" x="229" y="36" width="130" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Lxv-Lt-Jq0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1UG-8S-MsK"/>
-                    <constraint firstItem="Lxv-Lt-Jq0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-14" id="2gP-2V-FWL"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="IXN-UO-4DB" secondAttribute="trailing" constant="-11" id="5nG-r2-W1d"/>
-                    <constraint firstItem="IXN-UO-4DB" firstAttribute="centerY" secondItem="Lxv-Lt-Jq0" secondAttribute="centerY" id="F3A-jf-nem"/>
-                    <constraint firstItem="Lxv-Lt-Jq0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-52" id="Rzg-wA-5cd"/>
-                    <constraint firstItem="IXN-UO-4DB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="d3O-R0-wOE"/>
-                    <constraint firstItem="IXN-UO-4DB" firstAttribute="leading" secondItem="Lxv-Lt-Jq0" secondAttribute="trailing" constant="8" symbolic="YES" id="oNy-0b-EbB"/>
+                    <constraint firstAttribute="trailing" secondItem="R46-Oa-GJH" secondAttribute="trailing" constant="8" id="BLe-1Q-fS1"/>
+                    <constraint firstItem="hrn-T4-Z3J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Brt-gh-Rpz"/>
+                    <constraint firstItem="R46-Oa-GJH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="S7T-ZS-LcD"/>
+                    <constraint firstItem="mDd-9Y-Ehc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="VyK-PY-mX1"/>
+                    <constraint firstItem="hrn-T4-Z3J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="cEM-M6-16s"/>
+                    <constraint firstItem="IXN-UO-4DB" firstAttribute="top" secondItem="mDd-9Y-Ehc" secondAttribute="bottom" constant="4" id="hRb-8h-0dq"/>
+                    <constraint firstItem="IXN-UO-4DB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="jkF-2G-PKA"/>
+                    <constraint firstItem="n93-9h-VDa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="qKo-h0-I2P"/>
+                    <constraint firstItem="mDd-9Y-Ehc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="229" id="sZd-62-ogD"/>
+                    <constraint firstItem="IXN-UO-4DB" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="uHJ-7J-aH4"/>
+                    <constraint firstAttribute="bottom" secondItem="IXN-UO-4DB" secondAttribute="bottom" constant="8" id="yhw-50-zFq"/>
+                    <constraint firstAttribute="trailing" secondItem="n93-9h-VDa" secondAttribute="trailing" constant="8" id="zKp-4y-Jcb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageV" destination="Lxv-Lt-Jq0" id="ift-XH-HEz"/>
+                <outlet property="authorLbl" destination="hrn-T4-Z3J" id="92Y-DZ-4Kr"/>
+                <outlet property="creationDateLbl" destination="R46-Oa-GJH" id="bX3-HT-zbN"/>
+                <outlet property="scoreLbl" destination="n93-9h-VDa" id="q49-uL-TgV"/>
                 <outlet property="textView" destination="IXN-UO-4DB" id="DUr-nF-B5K"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="76.674107142857139"/>

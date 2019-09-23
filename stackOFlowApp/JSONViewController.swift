@@ -17,10 +17,9 @@ class JSONViewController : UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        if JSONdata != nil {
-//            textView.text = String(bytes: JSONdata!, encoding: .utf8)
-//        }
     }
+    
+    // по нажатию на кнопку  back
     @IBAction func backBtnTap(_ sender: UIButton) {
         performSegue(withIdentifier: "backToTableVC", sender: UIBarButtonItem.self)
     }

@@ -15,15 +15,26 @@ struct Element : Codable {
 struct Items : Codable {
     let title         : String?
     let profile_image : String?
+    let link          : String?
+    let creation_date : Int?
+    //let owner         : [String? : String?]
+    let score         : Int?
     
     enum CodingKeys: String, CodingKey {
         case title         = "title"
         case profile_image = "profile_image"
+        case link          = "link"
+        case creation_date = "creation_date"
+        case score         = "score"
+        //case owner         = "owner"
     }
     
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        
-//        self.title = try? container.decode(String.self, forKey: .title)
-//    }
 }
+
+//struct Owners : Codable {
+//    let display_name : String?
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case display_name = "display_name"
+//    }
+//}
